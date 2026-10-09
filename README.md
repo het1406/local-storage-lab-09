@@ -36,14 +36,14 @@ See `evidence/test_output.txt`, `evidence/analysis_output.txt` and the device ev
 
 | Test | Expected | Automated observation | Status |
 | --- | --- | --- | --- |
-| T1 | Upgrade keeps every guest row; fresh and upgraded schemas match | Fictional guest IDs 7 and 12 retain all values; version 2, FK enabled, schema comparison passes | PASS (automated); device results recorded separately |
+| T1 | Upgrade keeps every guest row; fresh and upgraded schemas match | Fictional guest IDs 7 and 12 retain all values; version 2, FK enabled, schema comparison passes | PASS; actual guest IDs 2/3/4 also preserved on device |
 | T2 | Two cards under one folder, one under another, distinct IDs and correct counts | Folder IDs 1/2; card IDs 1/2/3; counts 2/1; queries remain scoped | PASS |
 | T3 | Update one ID; cancel writes nothing | Card 1 title/notes updated; card 2 unchanged; widget test cancels edit of ID 11 with zero writes | PASS |
-| T4 | Reopening preserves records, without duplicate seeds | Close/reopen same file yields identical ordered card rows | PASS for DB reopen; device force-stop result recorded separately |
+| T4 | Reopening preserves records, without duplicate seeds | Close/reopen same file yields identical ordered card rows | PASS; actual release force-stop/relaunch also retained all rows |
 | T5 | Cancel changes nothing; confirmation cascades only selected folder | Widget test cancels folder 8 with zero writes, then confirms one targeted deletion. SQLite test removes folder 1/cards 1 and 2; folder 2/card 3 survive | PASS |
 | T6 | Invalid input writes nothing; missing/broken images fall back | Blank title, invalid suit, duplicate folder and nonexistent parent rejected; null/malformed/unavailable images render the suit | PASS |
 
-The original emulator database was backed up before migration outside this repository. It contains three fictional rows: `(2, River, 35)`, `(3, Acorn, 0)`, `(4, Oak, 130)`. `evidence/T1_before.json` records these original values. Screenshot/device verification must be read with the device report; database reopen is not claimed as an Android force-stop test.
+The original emulator database was backed up before migration outside this repository. It contains three fictional rows: `(2, River, 35)`, `(3, Acorn, 0)`, `(4, Oak, 130)`. `evidence/T1_before.json` records these original values. `evidence/device_report.md` describes the installed release smoke test and screenshot provenance. `T4_restart.json` proves the separate Android force-stop/relaunch comparison. `T2_cards.png` and `T2_folders.png` show actual device IDs 1/2/3 and counts 2/1. All six automated tests pass; the analyzer reports no issues.
 
 ## Rubric map
 
