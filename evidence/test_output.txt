@@ -1,0 +1,14 @@
+00:00 +0: loading /Users/hetjani/Desktop/inclass09/test/catalogue_test.dart
+00:00 +0: /Users/hetjani/Desktop/inclass09/test/catalogue_widget_test.dart: T3 cancel edit and T6 blank title write nothing
+00:00 +0: /Users/hetjani/Desktop/inclass09/test/catalogue_test.dart: T1 upgrade preserves every legacy row; fresh and upgraded schemas match
+T1 PASS: legacy IDs 7,12 and values unchanged; v2 schema matches fresh.
+00:00 +1: /Users/hetjani/Desktop/inclass09/test/catalogue_widget_test.dart: T3 cancel edit and T6 blank title write nothing
+00:00 +1: /Users/hetjani/Desktop/inclass09/test/catalogue_test.dart: T2–T5 identity, counts, restart, foreign keys and cascade
+T2/T3/T4/T5 repository PASS: folders 1,2; cards 1,2,3; reopen unchanged; cascade isolated. UI cancel and force-stop require separate checks.
+00:00 +2: /Users/hetjani/Desktop/inclass09/test/catalogue_widget_test.dart: T3 cancel edit and T6 blank title write nothing
+00:00 +2: /Users/hetjani/Desktop/inclass09/test/catalogue_test.dart: T6 invalid title/suit and duplicate folder leave records intact
+T6 repository PASS: invalid writes rejected; folder 1, card 1 intact.
+00:00 +3: /Users/hetjani/Desktop/inclass09/test/catalogue_widget_test.dart: T3 cancel edit and T6 blank title write nothing
+00:00 +4: /Users/hetjani/Desktop/inclass09/test/catalogue_widget_test.dart: T5 cancel deletion preserves folder; confirm targets its ID
+00:00 +5: /Users/hetjani/Desktop/inclass09/test/catalogue_widget_test.dart: T6 missing, malformed and unavailable image show the suit
+00:01 +6: All tests passed!

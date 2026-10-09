@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "rows": [
+    [
+      2,
+      "River",
+      35
+    ],
+    [
+      3,
+      "Acorn",
+      0
+    ],
+    [
+      4,
+      "Oak",
+      130
+    ]
+  ],
+  "tables": [
+    [
+      "android_metadata"
+    ],
+    [
+      "my_table"
+    ],
+    [
+      "folders"
+    ],
+    [
+      "sqlite_sequence"
+    ],
+    [
+      "cards"
+    ]
+  ]
+}
